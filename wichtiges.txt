@@ -19,18 +19,7 @@ source env/bin/activate
    Erstellt ein neues Git-Repository in dem aktuellen Verzeichnis.
 
 2. **`git clone <URL>`**  
-   Klont ein vorhandenes Repository aus einer angegebenen URL.
-
-3. **`git add <Datei>`**  
-   Fügt Änderungen einer Datei zur Staging-Area hinzu, damit sie im nächsten Commit enthalten sind.
-
-4. **`git commit -m "<Nachricht>"`**  
-   Speichert die Änderungen dauerhaft im Repository mit einer beschreibenden Nachricht.
-
-5. **`git status`**  
-   Zeigt den aktuellen Status des Repositories, einschließlich unversionierter Dateien oder Änderungen.
-
-6. **`git log`**  
+   Klont ein vorhandenes Repository aus einer angegebenen URL
    Zeigt eine Historie der Commits im Repository.
 
 7. **`git branch`**  
