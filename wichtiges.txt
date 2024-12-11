@@ -1,0 +1,202 @@
+vielleicht
+pip install virtualenv
+
+app a pzthon 3
+app b pzthon 2
+app c pzthon 1
+---------------------------------
+
+python -m venv <verzeichnis>
+.\venv\Scripts\activate
+deactivate
+
+python<version> -m venv <virtual-environment-name>
+
+source env/bin/activate
+
+
+1. **`git init`**  
+   Erstellt ein neues Git-Repository in dem aktuellen Verzeichnis.
+
+2. **`git clone <URL>`**  
+   Klont ein vorhandenes Repository aus einer angegebenen URL.
+
+3. **`git add <Datei>`**  
+   Fügt Änderungen einer Datei zur Staging-Area hinzu, damit sie im nächsten Commit enthalten sind.
+
+4. **`git commit -m "<Nachricht>"`**  
+   Speichert die Änderungen dauerhaft im Repository mit einer beschreibenden Nachricht.
+
+5. **`git status`**  
+   Zeigt den aktuellen Status des Repositories, einschließlich unversionierter Dateien oder Änderungen.
+
+6. **`git log`**  
+   Zeigt eine Historie der Commits im Repository.
+
+7. **`git branch`**  
+   Listet alle vorhandenen Branches auf oder erstellt mit `git branch <Name>` einen neuen Branch.
+
+8. **`git checkout <Branch>`**  
+   Wechselt zu einem anderen Branch.
+
+9. **`git merge <Branch>`**  
+   Führt einen anderen Branch in den aktuellen Branch zusammen.
+
+10. **`git pull`**  
+    Holt Änderungen aus einem entfernten Repository und integriert sie in den aktuellen Branch.
+
+11. **`git push`**  
+    Überträgt lokale Commits in ein entferntes Repository.
+
+12. **`git remote add <Name> <URL>`**  
+    Verknüpft ein lokales Repository mit einem entfernten Repository.
+
+13. **`git fetch`**  
+    Holt Änderungen aus einem entfernten Repository, integriert sie jedoch nicht automatisch.
+
+14. **`git diff`**  
+    Zeigt Unterschiede zwischen dem aktuellen Zustand und dem letzten Commit an.
+
+15. **`git reset <Datei>`**  
+    Entfernt eine Datei aus der Staging-Area (macht `git add` rückgängig).
+
+16. **`git rebase <Branch>`**  
+    Wendet Änderungen des aktuellen Branches auf einen anderen Branch an.
+
+17. **`git stash`**  
+    Speichert Änderungen temporär, um später daran weiterzuarbeiten.
+
+18. **`git stash apply`**  
+    Ruft temporär gespeicherte Änderungen wieder ab.
+
+19. **`git tag <Tag-Name>`**  
+    Erstellt ein Tag für einen bestimmten Commit, häufig für Versionsmarkierungen.
+
+20. **`git rm <Datei>`**  
+    Entfernt eine Datei aus dem Repository und der Arbeitskopie.
+
+21. **`git revert <Commit-Hash>`**  
+    Macht die Änderungen eines bestimmten Commits rückgängig.
+
+
+pip freeze > requirements.txt
+
+pip install -r requirements.txt
+
+pip install <paket>
+
+pip list
+
+
+
+touch .gitignore
+
+datei.txt
+Dateityp ignorieren
+
+gitignore
+Code kopieren
+*.log         # Alle Dateien mit der Endung .log
+*.tmp         # Alle Dateien mit der Endung .tmp
+2. Verzeichnisse ignorieren
+Ein bestimmtes Verzeichnis ignorieren
+
+gitignore
+Code kopieren
+ordner/
+Alle Ordner mit einem bestimmten Namen ignorieren (rekursiv)
+
+gitignore
+Code kopieren
+logs/
+3. Ausnahmen definieren
+Bestimmte Dateien aus einer Regel ausschließen
+
+gitignore
+Code kopieren
+*.log
+!wichtige.log
+Ein Ordner ausschließen, aber bestimmte Dateien behalten
+
+gitignore
+Code kopieren
+logs/
+!logs/keep.log
+4. Platzhalter verwenden
+Ein Sternchen (*) für beliebige Zeichen
+
+gitignore
+Code kopieren
+*.log         # Alle Dateien mit der Endung .log
+temp*         # Dateien, die mit 'temp' beginnen
+Ein Fragezeichen (?) für ein einzelnes Zeichen
+
+gitignore
+Code kopieren
+datei?.txt    # datei1.txt, datei2.txt, aber nicht datei12.txt
+Doppelstern (**) für beliebige Verzeichnistiefen
+
+gitignore
+Code kopieren
+logs/**/debug.log  # Alle debug.log-Dateien in allen Unterordnern von logs
+**/temp.txt        # temp.txt in beliebiger Verzeichnistiefe
+5. Kommentare
+Kommentarzeilen beginnen mit #
+gitignore
+Code kopieren
+# Ignoriere Log-Dateien
+*.log
+
+
+
+Ein Pull Request (PR) ist eine Methode, um Änderungen in einem Git-Repository vorzuschlagen und zur Überprüfung bereitzustellen. Dies wird häufig in kollaborativen Projekten verwendet, insbesondere bei Plattformen wie GitHub, GitLab oder Bitbucket.
+
+Hier ist ein Überblick über Pull Requests:
+
+1. Was ist ein Pull Request?
+Ein Pull Request ist eine Anfrage, um Änderungen (oft in einem Branch) in das Hauptrepository oder einen anderen Branch zu integrieren. Dabei können Reviewer den Code begutachten, Feedback geben und Änderungen vorschlagen, bevor der PR akzeptiert (gemerged) wird.
+
+2. Typischer Workflow eines Pull Requests
+Fork und Clone (optional)
+Forke das Repository (falls du keinen Schreibzugriff hast) und klone es auf deinen lokalen Computer:
+
+bash
+Code kopieren
+git clone <repository-url>
+Einen neuen Branch erstellen
+Erstelle einen neuen Branch für deine Änderungen:
+
+bash
+Code kopieren
+git checkout -b feature/xyz
+Änderungen vornehmen und committen
+Nimm die Änderungen vor, füge Dateien hinzu und erstelle Commits:
+
+bash
+Code kopieren
+git add .
+git commit -m "Beschreibung der Änderungen"
+Branch pushen
+Lade deinen Branch in das Remote-Repository hoch:
+
+bash
+Code kopieren
+git push origin feature/xyz
+Pull Request erstellen
+
+Gehe zur Plattform (z. B. GitHub).
+Navigiere zum Repository und klicke auf „Pull Request“.
+Wähle deinen Branch aus und erstelle den PR, indem du die Änderungen beschreibst.
+Review und Feedback
+
+Die Teammitglieder oder Repository-Besitzer überprüfen den PR.
+Sie können Kommentare oder Änderungsanfragen hinterlassen.
+Änderungen umsetzen (falls notwendig)
+Implementiere das Feedback, committe die Änderungen und pushe sie erneut:
+
+bash
+Code kopieren
+git commit -m "Feedback umgesetzt"
+git push origin feature/xyz
+Merge des Pull Requests
+Nach Zustimmung (und erfolgreichen Tests, falls vorhanden) wird der PR gemerged.
